@@ -12,6 +12,10 @@ body {
   height: auto !important;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 @-webkit-keyframes fade-up {
   0% {
     opacity: 0;
@@ -137,7 +141,18 @@ body {
 
 .section-one {
   height: 100vh;
-  background: beige;
+  background: #fffff4;
+}
+
+.squares {
+  margin-top: 20px;
+}
+
+.box {
+  background: pink;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
 }
 
 .rule-grow {

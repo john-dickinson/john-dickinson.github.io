@@ -47,6 +47,7 @@ $(function(){
   //
   // calls
   //
+  
   $.each(sidebar_module.sections, function(k, v){
     var _target = $('.' + k),
     _section = $('.' + v);
@@ -55,7 +56,7 @@ $(function(){
     })
   });
 
-  $('.anim-el').map(function(index, val){ 
+  $('.anim-el').map(function(index, val){
     $(val).addClass('animated-el');
   })
 
