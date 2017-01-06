@@ -62,7 +62,7 @@ $(function(){
   //
 
   $.each($('.box'), function(i, v){
-    var o = 30;
+    var o = 50;
     box_module.levitate(v);
     box_module.cascade(i, v, o);
   })
