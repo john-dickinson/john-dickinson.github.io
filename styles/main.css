@@ -86,13 +86,13 @@ h1 {
     transform: translateY(0px);
   }
   25% {
-    transform: translateY(-7px);
+    transform: translateY(-9px);
   }
   50% {
     transform: translateY(0px);
   }
   75% {
-    transform: translateY(7px);
+    transform: translateY(9px);
   }
   100% {
     transform: translateY(0px);
@@ -104,13 +104,13 @@ h1 {
     transform: translateY(0px);
   }
   25% {
-    transform: translateY(-7px);
+    transform: translateY(-9px);
   }
   50% {
     transform: translateY(0px);
   }
   75% {
-    transform: translateY(7px);
+    transform: translateY(9px);
   }
   100% {
     transform: translateY(0px);
@@ -129,7 +129,7 @@ h1 {
 .box {
   transform: translateY(-50px);
   opacity: 0;
-  background: pink;
+  background: #f7a1a1;
   width: 0px;
   height: 0px;
   margin: 10px auto;
@@ -144,6 +144,39 @@ h1 {
   opacity: 1;
   width: 80px;
   height: 80px;
+}
+
+.righty {
+  padding: 50px;
+  box-shadow: 0px 50px 50px 0px rgba(0, 0, 0, 0.3);
+}
+
+.lefty {
+  /*background: #ffe1e1;*/
+  background: #1a1f29;
+}
+
+.inner-box {
+  background: -webkit-linear-gradient(-45deg, #F45035 0%, #E31371 30%, #373990: 100%) no-repeat fixed center;
+  background: -webkit-linear-gradient(135deg, #F45035 0%, #E31371 30%, #373990: 100%) no-repeat fixed center;
+  background: linear-gradient(-45deg, #F45035 0%, #E31371 30%, #373990 100%) no-repeat fixed center;
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
+  transform: translateX(-100px);
+}
+
+.box-a {
+  transform: translateX(-100px);
+}
+
+.box-b {
+  transform: translateX(50px);
+}
+
+.box-c {
+  transform: translateX(-100px);
 }
 
 .rule-grow {
@@ -174,7 +207,7 @@ h1 {
   padding-top: 20px;
   /*position: fixed;*/
   height: auto;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #333333;
 }
 
 .section {
@@ -201,8 +234,8 @@ h1 {
   background: white;
   transition: all 300ms ease;
   padding: 15px;
-  -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.1);
   border: 1px solid #ccc;
   opacity: 0;
 }
@@ -230,13 +263,15 @@ h1 {
   opacity: 0;
 }
 
-.anim-el {
+.anim-el, .anim-el-secondary {
   opacity: 0;
-  transition: all 500ms ease;
+  transition: all 500ms ease-out;
+  transform: translateY(50px);
 }
 
-.animated-el {
+.rise-no-width {
   opacity: 1;
+  transform: translateY(0px);
 }
 
 .link-list-item {

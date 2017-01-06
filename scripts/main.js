@@ -76,8 +76,14 @@ $(function(){
   });
 
   $('.anim-el').map(function(index, val){
-    $(val).addClass('animated-el');
-  })
+    setTimeout(function(){
+      $(val).addClass('rise-no-width');
+    }, 400);
+  });
+
+  setTimeout(function(){
+    $('.anim-el-secondary').addClass('rise-no-width');
+  }, 600);
 
   $('.nav-icon').click(function(){
     sidebar_module.toggleSidebar();
