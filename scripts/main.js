@@ -1,11 +1,8 @@
 $(function(){
 
-  //
-  // declarations
-  //
-
   // sidebar module
   var sidebar_module = {
+
     sections: {
       "section-one-target": "section-one",
       "section-two-target": "section-two",
@@ -41,13 +38,35 @@ $(function(){
       var rule = item.find('.rule');
       rule.addClass('rule-grow');
     }
+  }
 
+  // box module
+
+  var box_module = {
+
+    levitate: function(box){
+      var randy = Math.abs(Math.floor(Math.random() * 7) + 5 ).toString() + 's';
+      $(box).css('animation-duration', randy);
+    },
+
+    cascade: function(index, value, offset){
+      timeout = (index * 30);
+      setTimeout(function(){
+        $(value).addClass('rise');
+      }, timeout);
+    }
   }
 
   //
   // calls
   //
-  
+
+  $.each($('.box'), function(i, v){
+    var o = 30;
+    box_module.levitate(v);
+    box_module.cascade(i, v, o);
+  })
+
   $.each(sidebar_module.sections, function(k, v){
     var _target = $('.' + k),
     _section = $('.' + v);
