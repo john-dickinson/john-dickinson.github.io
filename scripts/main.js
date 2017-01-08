@@ -96,7 +96,7 @@ var section_module = {
   // render the contact section when the user has scrolled to bottom
   finalSection: function(){
     var hidden_contact = $('.section-six').find('.hidden');
-    if($(window).scrollTop() + $(window).height() === $(document).height()) {
+    if($(window).scrollTop() + $(window).height() >= $(document).height()) {
       $.each(hidden_contact, function(index, value){
         var timeout = index * 100;
         setTimeout(function(){
@@ -120,7 +120,6 @@ var portfolio_module = {
       $.each(items, function(index, value){
         var timeout = index * 100;
         setTimeout(function(){
-          $()
           $(value).addClass('rise');
         }, timeout);
       })
