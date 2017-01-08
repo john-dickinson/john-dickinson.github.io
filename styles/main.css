@@ -28,7 +28,7 @@ h1 {
 }
 
 .portfolio {
-  z-index: 999;
+  z-index: 99;
   position: relative;
   box-shadow: 0 -10px 15px 0 rgba(0, 0, 0, 0.15);
   background: #e9fff4;
@@ -247,6 +247,14 @@ h2 {
 .rule-grow {
   -webkit-animation: rule-grow .5s forwards;
   animation: rule-grow .5s forwards;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+
+.rule-grow-long {
+  -webkit-animation: rule-grow 1.5s forwards;
+  animation: rule-grow 1.5s forwards;
   animation-timing-function: ease;
   animation-delay: 0s;
   -webkit-animation-delay: 0s;

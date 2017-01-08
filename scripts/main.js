@@ -84,10 +84,12 @@ var section_module = {
     var top = $(window).scrollTop();
     var sectionHeight = section_module.sections[section];
     if(top >= sectionHeight){
+      var rule = $(section).find('.section-rule');
       $.each(hidden, function(index, value){
         var timeout = index * 100;
         setTimeout(function(){
           $(value).addClass('rise');
+          $(rule).addClass('rule-grow-long');
         }, timeout);
       })
     }
@@ -112,7 +114,7 @@ var portfolio_module = {
   // For each portfolio item render its contents
   // with a cascading delay when the user scrolls past the section
   cascadeItems: function(){
-    var sectionTop = $('.portfolio').offset().top - (window.innerHeight - 500),
+    var sectionTop = $('.portfolio').offset().top - (window.innerHeight - 400),
     top = $(window).scrollTop(),
     items = $('.portfolio-item-wrap');
     if(top >= sectionTop){
@@ -140,7 +142,7 @@ $(function(){
 
   // for each hidden section, render its contents when users scrolls to it
   $.each(section_module.sections, function(key, value){
-    var top = $(key).offset().top - (window.innerHeight - 400);
+    var top = $(key).offset().top - (window.innerHeight - 350);
     section_module.sections[key] = top;
     var hidden_els = $(key).find('.hidden');
     $(window).scroll(function(){
