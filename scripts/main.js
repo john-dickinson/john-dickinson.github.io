@@ -101,7 +101,6 @@ $(function(){
     var top = $(key).offset().top - (window.innerHeight - 400);
     section_module.sections[key] = top;
     var hidden_els = $(key).find('.hidden');
-    console.log(section_module.sections)
     $(window).scroll(function(){
       section_module.renderSection(key, hidden_els);
     });
@@ -145,6 +144,15 @@ $(function(){
   $('.link-list-item').hover(function(){
     _this = $(this);
     sidebar_module.ruleAnimate(_this);
-  })
+  });
+
+  // close sidebar when body is clicked
+  $('.section, .righty, .lefty, .footer').click(function(){
+    if($('.sidebar-nav').attr('data-visible') === "true"){
+      $('.sidebar-nav').removeClass('sidebar-shown').attr('data-visible','false');;
+      $('.sidebar-list').css('opacity','0')
+      $('.nav-icon-close').removeClass('icon-appear');
+    }
+  });
 
 });
