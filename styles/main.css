@@ -14,6 +14,7 @@ body {
 
 h1 {
   font-size: 50px;
+  margin-bottom: 30px;
 }
 
 @-webkit-keyframes fade-up {
@@ -120,6 +121,11 @@ h1 {
 .section-one {
   height: 100vh;
   background: #fffff4;
+  box-shadow: 0px 0px 20px 0px;
+}
+
+h2 {
+  margin-bottom: 20px;
 }
 
 .squares {
@@ -129,7 +135,8 @@ h1 {
 .box {
   transform: translateY(-50px);
   opacity: 0;
-  background: #f7a1a1;
+  /*background: #f7a1a1;*/
+  background: #9ae4ca;
   width: 0px;
   height: 0px;
   margin: 10px auto;
