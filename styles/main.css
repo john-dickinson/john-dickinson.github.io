@@ -14,7 +14,11 @@ body {
 
 h1 {
   font-size: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.section-rule {
+  margin-bottom: 20px;
 }
 
 @-webkit-keyframes fade-up {
@@ -122,6 +126,8 @@ h1 {
   height: 100vh;
   background: #fffff4;
   box-shadow: 0px 0px 20px 0px;
+  z-index: 1;
+  position: relative;
 }
 
 h2 {
@@ -132,10 +138,18 @@ h2 {
   margin-top: 20px;
 }
 
+.work-item {
+  margin-bottom: 50px;
+}
+
+.duration {
+  margin-bottom: 10px;
+  color: #54b391;
+}
+
 .box {
   transform: translateY(-50px);
   opacity: 0;
-  /*background: #f7a1a1;*/
   background: #9ae4ca;
   width: 0px;
   height: 0px;
@@ -144,6 +158,7 @@ h2 {
   animation-timing-function: ease;
   animation-iteration-count: infinite;
   transition: all 500ms ease;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 .rise {
@@ -159,8 +174,13 @@ h2 {
 }
 
 .lefty {
-  /*background: #ffe1e1;*/
   background: #1a1f29;
+}
+
+.fixed-container {
+  position: fixed;
+  top: 30%;
+  left: 15%;
 }
 
 .inner-box {
@@ -212,7 +232,6 @@ h2 {
   background: rgb(31, 32, 37);
   color: white;
   padding-top: 20px;
-  /*position: fixed;*/
   height: auto;
   border-right: 1px solid #333333;
 }
@@ -270,7 +289,7 @@ h2 {
   opacity: 0;
 }
 
-.anim-el, .anim-el-secondary {
+.hidden, .anim-el, .anim-el-secondary {
   opacity: 0;
   transition: all 500ms ease-out;
   transform: translateY(50px);

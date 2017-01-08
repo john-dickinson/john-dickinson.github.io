@@ -57,9 +57,31 @@ $(function(){
     }
   }
 
+  var section_module = {
+    sections: {'.section-two': 0, '.section-three': 0, '.section-four': 0},
+
+    renderSection: function(){
+
+    }
+
+  }
+
   //
   // calls
   //
+
+  // $.each(section_module.sections, function(k, v){
+  //   var top = $(k).offset().top;
+  //   section_module.sections[k] = top;
+  // });
+
+  $(window).scroll(function(){
+    $.each(section_module.sections, function(k, v){
+      var top = $(k).offset().top;
+      section_module.sections[k] = top;
+      console.log(section_module.sections)
+    });
+  });
 
   $.each($('.box'), function(i, v){
     var o = 50;
