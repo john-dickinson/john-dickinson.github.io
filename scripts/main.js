@@ -98,11 +98,12 @@ $(function(){
 
   // for each hidden section, render its contents when users scrolls to it
   $.each(section_module.sections, function(key, value){
-    var top = $(key).offset().top;
+    var top = $(key).offset().top - (window.innerHeight - 400);
     section_module.sections[key] = top;
     var hidden_els = $(key).find('.hidden');
+    console.log(section_module.sections)
     $(window).scroll(function(){
-      section_module.renderSection(key);
+      section_module.renderSection(key, hidden_els);
     });
   });
 
