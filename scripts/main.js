@@ -9,6 +9,8 @@ var sidebar_module = {
     "section-two-target": "section-two",
     "section-three-target": "section-three",
     "section-four-target": "section-four",
+    "section-five-target": "section-five",
+    "section-six-target": "section-six",
   },
 
   // toggle the sidebar, based on its data-visible attribute,
@@ -62,7 +64,7 @@ var box_module = {
   cascade: function(index, value, offset){
     timeout = (index * 30);
     setTimeout(function(){
-      $(value).addClass('rise');
+      $(value).addClass('rise-width');
     }, timeout);
   }
 }
@@ -73,7 +75,8 @@ var section_module = {
   // sections to render and dummy starting offset top values of zero
   sections: {'.section-two': 0,
   '.section-three': 0,
-  '.section-four': 0},
+  '.section-four': 0,
+  '.section-six': 0},
 
   // For each section and its nested hidden elements, render their contents
   // with a cascading delay if the user scrolls past said element
@@ -84,7 +87,41 @@ var section_module = {
       $.each(hidden, function(index, value){
         var timeout = index * 100;
         setTimeout(function(){
-          $(value).addClass('rise-no-width');
+          $(value).addClass('rise');
+        }, timeout);
+      })
+    }
+  },
+
+  // render the contact section when the user has scrolled to bottom
+  finalSection: function(){
+    var hidden_contact = $('.section-six').find('.hidden');
+    if($(window).scrollTop() + $(window).height() === $(document).height()) {
+      $.each(hidden_contact, function(index, value){
+        var timeout = index * 100;
+        setTimeout(function(){
+          $(value).addClass('rise');
+        }, timeout);
+      })
+    }
+  }
+
+}
+
+var portfolio_module = {
+  // For each portfolio item render its contents
+  // with a cascading delay when the user scrolls past the section
+  cascadeItems: function(){
+    var sectionTop = $('.portfolio').offset().top - (window.innerHeight - 500),
+    top = $(window).scrollTop(),
+    items = $('.portfolio-item-wrap');
+    if(top >= sectionTop){
+      $('.example-header').addClass('rise');
+      $.each(items, function(index, value){
+        var timeout = index * 100;
+        setTimeout(function(){
+          $()
+          $(value).addClass('rise');
         }, timeout);
       })
     }
@@ -95,6 +132,12 @@ var section_module = {
 // calls
 //
 $(function(){
+
+  // listen for scroll related function calls
+  $(window).scroll(function(){
+    portfolio_module.cascadeItems();
+    section_module.finalSection();
+  });
 
   // for each hidden section, render its contents when users scrolls to it
   $.each(section_module.sections, function(key, value){
@@ -126,13 +169,13 @@ $(function(){
   // animated certain elements up on-load
   $('.anim-el').map(function(index, value){
     setTimeout(function(){
-      $(value).addClass('rise-no-width');
+      $(value).addClass('rise');
     }, 400);
   });
 
   // animate secondary elements on-load with a 2ms delay
   setTimeout(function(){
-    $('.anim-el-secondary').addClass('rise-no-width');
+    $('.anim-el-secondary').addClass('rise');
   }, 600);
 
   // show the sidebar module when the burger is clicked

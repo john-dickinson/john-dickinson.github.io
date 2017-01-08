@@ -27,7 +27,59 @@ h1 {
   position: relative;
 }
 
+.portfolio {
+  z-index: 999;
+  position: relative;
+  box-shadow: 0 -10px 15px 0 rgba(0, 0, 0, 0.15);
+  background: #e9fff4;
+  padding: 50px;
+}
+
+.portfolio-item-wrap {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 700ms ease;
+}
+
+.section-six {
+  background: white;
+  color: black;
+  z-index: 99;
+  position: relative;
+}
+
+.portfolio-item {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 10px 5px;
+  padding: 70px 20px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+  background: white;
+  border-top: 4px solid rgb(93, 209, 178);
+  transition: all 200ms ease-out;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  background: #c7e7f9;
+  /*background: -webkit-linear-gradient(-45deg, #F45035 0%, #E31371 30%, #373990: 100%) no-repeat fixed center;
+  background: -webkit-linear-gradient(135deg, #F45035 0%, #E31371 30%, #373990: 100%) no-repeat fixed center;
+  background: linear-gradient(-45deg, #F45035 0%, #E31371 30%, #373990 100%) no-repeat fixed center;*/
+}
+
+.port-link {
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
 .section-rule {
+  margin-bottom: 20px;
+}
+
+.role {
   margin-bottom: 20px;
 }
 
@@ -171,7 +223,7 @@ h2 {
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
-.rise {
+.rise-width {
   transform: translateY(0px);
   opacity: 1;
   width: 80px;
@@ -190,29 +242,6 @@ h2 {
   position: fixed;
   top: 25%;
   left: 15%;
-}
-
-.inner-box {
-  background: -webkit-linear-gradient(-45deg, #F45035 0%, #E31371 30%, #373990: 100%) no-repeat fixed center;
-  background: -webkit-linear-gradient(135deg, #F45035 0%, #E31371 30%, #373990: 100%) no-repeat fixed center;
-  background: linear-gradient(-45deg, #F45035 0%, #E31371 30%, #373990 100%) no-repeat fixed center;
-  margin-top: 50px;
-  width: 250px;
-  height: 250px;
-  box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
-  transform: translateX(-100px);
-}
-
-.box-a {
-  transform: translateX(-100px);
-}
-
-.box-b {
-  transform: translateX(50px);
-}
-
-.box-c {
-  transform: translateX(-100px);
 }
 
 .rule-grow {
@@ -306,7 +335,7 @@ h2 {
   transform: translateY(50px);
 }
 
-.rise-no-width {
+.rise {
   opacity: 1;
   transform: translateY(0px);
 }
