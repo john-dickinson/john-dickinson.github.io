@@ -76,6 +76,7 @@ h1 {
 }
 
 .section-rule {
+  background: black;
   margin-bottom: 20px;
 }
 
@@ -253,8 +254,8 @@ h2 {
 }
 
 .rule-grow-long {
-  -webkit-animation: rule-grow 1.5s forwards;
-  animation: rule-grow 1.5s forwards;
+  -webkit-animation: rule-grow 1.7s forwards;
+  animation: rule-grow 1.7s forwards;
   animation-timing-function: ease;
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
@@ -361,6 +362,7 @@ a {
   width: 0%;
   opacity: 0;
   margin: 5px auto;
+  background: black;
 }
 
 .thin-header {
