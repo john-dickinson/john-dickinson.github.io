@@ -1,7 +1,16 @@
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/Questrial-Regular.ttf')
+}
+
 * {
   padding: 0;
   margin: 0;
   font-family: 'Questrial', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
